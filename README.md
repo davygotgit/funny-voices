@@ -140,7 +140,7 @@ All the examples will give you the confidence that a particular microcontroller 
 
 I ran into two challenges with this project.
 
-The first challenge was with the sizing of the recording buffer. I thought I had sized the buffer correctly by using samples/sec * channels (mono == 1) * sample size (16 bit) * seconds, which is 16000 * 1 * 16 * 1 or 16000 * 16. However, I could only get one recording and playback cycle at this size. It seemed like there was some buffer overrun issue. To overcome this problem, I added a slight pad to the buffer of 50%. Originally I doubled the size of the buffer, but this seemed like it would consume too much memory. I have not tried 10% or 25% to see if this still works.
+The first challenge was with the sizing of the recording buffer. I thought I had sized the buffer correctly by using samples/sec * channels (mono == 1) * sample size (16 bit) * seconds, which is 16000 * 1 * 2 * 1, or 16000 * 2. However, I could only get one recording and playback cycle at this size. It seemed like there was some buffer overrun issue. To overcome this problem, I added a slight pad to the buffer of 50%. Originally I doubled the size of the buffer, but this seemed like it would consume too much memory. I have not tried 10% or 25% to see if this still works.
 
 The other issue was with access to the microphone and speaker. The controller can only record or playback. There are API calls that control the microphone and speaker e.g. M5.Mic.begin(),  M5.Mic.end(), M5.Mic.record(), M5.Mic.isEnabled() and M5.Mic.isRecording(). The speaker has a similar set of API calls e.g. M5.Speaker.begin(), M5.Speaker.playRaw() etc. 
 
