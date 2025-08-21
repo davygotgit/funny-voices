@@ -39,6 +39,10 @@ The Core2 can only record or playback – it cannot do both at once. The followi
 
 <img width="50%" height="50%" alt="image" src="https://github.com/user-attachments/assets/69d6a06e-6dd3-4c6f-8f09-cad98c5cb3fc" />
 
+Here's a video showing the project working:
+
+[![short video](https://img.youtube.com/vi/BeuMcezUqzY/0.jpg)](https://www.youtube.com/watch?v=BeuMcezUqzY)
+
 ## Technical Overview
 
 Here’s an overview of the recording/playback process:
