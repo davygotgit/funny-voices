@@ -158,4 +158,6 @@ I hoped to use the M5.device.isEnabled() API calls to determine the current stat
 1. The range of sounds effects could be extended. This was just a quick and fun project to see if I could make my voice sound odder than usual. Sound is recorded as a raw WAV file, which means it could be processed in other ways than just playback speed.
 
 2. The more I look at the interface, the less intuitive it becomes. I might change the buttons around to give them better meaning e.g. + and - might be better used for the slower and faster playback speeds rather than < and >.
+   
+3. See if Voice Activity Detection (VAD) can be used to control the amount audio to record. Currently, the project records 1 second of audio and requires the user to push buttons to start and stop recording. It would be useful to start recording when someone speaks and stop recording when they stop speaking. There may have to be a limit on the amount of audio, like 4 seconds, as the microcontroller has limited memory resources.
        
